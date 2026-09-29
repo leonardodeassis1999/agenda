@@ -1,0 +1,15 @@
+# Segredos locais
+.env
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Editor / sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
