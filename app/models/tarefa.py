@@ -4,6 +4,7 @@ from datetime import date, datetime
 from sqlalchemy import ForeignKey, String, Text, func
 from sqlalchemy.orm import Mapped, mapped_column
 
+from app.core.tempo import hoje
 from app.database.connection import Base
 
 
@@ -23,3 +24,8 @@ class Tarefa(Base):
     iniciada_em: Mapped[datetime | None]
     concluida_em: Mapped[datetime | None]
     criado_em: Mapped[datetime] = mapped_column(server_default=func.now())
+
+    @property
+    def atrasada(self) -> bool:
+        """Não existe no banco: data anterior a hoje e tarefa não concluída."""
+        return self.status != "concluida" and self.data_prevista < hoje()
