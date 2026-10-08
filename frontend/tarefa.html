@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tarefa - Meu Dia</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header class="topo" id="topo"></header>
+
+  <main class="pagina">
+    <section class="cartao cartao-largo">
+      <h1 id="titulo-pagina">Nova tarefa</h1>
+      <p class="subtitulo">Informe o que precisa ser feito e quanto tempo deve levar.</p>
+
+      <form id="form-tarefa">
+        <label for="titulo">Título</label>
+        <input id="titulo" type="text" maxlength="150" required>
+
+        <label for="descricao">Descrição (opcional)</label>
+        <textarea id="descricao" rows="3" maxlength="2000"></textarea>
+
+        <div class="linha-dupla">
+          <div>
+            <label for="categoria">Categoria (opcional)</label>
+            <input id="categoria" type="text" maxlength="50" list="categorias">
+            <datalist id="categorias"></datalist>
+          </div>
+          <div>
+            <label for="prioridade">Prioridade</label>
+            <select id="prioridade">
+              <option value="alta">Alta</option>
+              <option value="media" selected>Média</option>
+              <option value="baixa">Baixa</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="linha-dupla">
+          <div>
+            <label for="data">Data</label>
+            <input id="data" type="date" required>
+          </div>
+          <div>
+            <label for="tempo">Tempo estimado (minutos)</label>
+            <input id="tempo" type="number" min="1" max="1440" step="1" required>
+          </div>
+        </div>
+        <div class="chips" id="chips">
+          <button type="button" class="btn" data-min="15">15 min</button>
+          <button type="button" class="btn" data-min="30">30 min</button>
+          <button type="button" class="btn" data-min="60">1 h</button>
+          <button type="button" class="btn" data-min="120">2 h</button>
+        </div>
+
+        <div class="botoes-form">
+          <button class="botao" type="submit" id="btn-salvar">Salvar</button>
+          <button class="botao botao-secundario" type="button" id="btn-outra">Salvar e criar outra</button>
+          <button class="btn btn-perigo" type="button" id="btn-excluir" hidden>Excluir</button>
+        </div>
+      </form>
+
+      <div class="mensagem" id="erro" role="alert" hidden></div>
+      <div class="sucesso" id="ok" role="status" hidden></div>
+    </section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/comum.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/tarefa.js"></script>
+</body>
+</html>

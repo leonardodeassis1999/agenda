@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meu Dia</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <main class="centro">
+    <section class="cartao">
+      <h1>Meu Dia</h1>
+      <p class="subtitulo">Organize o seu dia com o tempo que você tem.</p>
+
+      <div class="abas">
+        <button type="button" class="aba ativa" id="aba-entrar">Entrar</button>
+        <button type="button" class="aba" id="aba-cadastro">Criar conta</button>
+      </div>
+
+      <form id="form-entrar">
+        <label for="login-email">E-mail</label>
+        <input id="login-email" type="email" autocomplete="email" required>
+        <label for="login-senha">Senha</label>
+        <input id="login-senha" type="password" autocomplete="current-password" required>
+        <button class="botao" type="submit">Entrar</button>
+      </form>
+
+      <form id="form-cadastro" hidden>
+        <label for="cad-nome">Nome</label>
+        <input id="cad-nome" type="text" autocomplete="name" minlength="2" maxlength="100" required>
+        <label for="cad-email">E-mail</label>
+        <input id="cad-email" type="email" autocomplete="email" required>
+        <label for="cad-senha">Senha (mínimo 8 caracteres)</label>
+        <input id="cad-senha" type="password" autocomplete="new-password" minlength="8" maxlength="72" required>
+        <button class="botao" type="submit">Criar conta</button>
+      </form>
+
+      <div class="mensagem" id="mensagem" role="alert" hidden></div>
+    </section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

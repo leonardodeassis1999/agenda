@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meu Dia</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header class="topo" id="topo"></header>
+
+  <main class="pagina">
+    <section class="cartao cartao-largo">
+      <h1 id="saudacao">Meu Dia</h1>
+      <p class="subtitulo" id="data-hoje"></p>
+
+      <div class="barra" aria-label="Progresso do dia">
+        <div class="barra-preenchida" id="barra"></div>
+      </div>
+      <div class="resumo" id="resumo"></div>
+
+      <div class="atalhos">
+        <button class="btn" type="button" disabled title="Disponível em uma próxima etapa">O que faço agora?</button>
+        <button class="btn" type="button" disabled title="Disponível em uma próxima etapa">Meu dia saiu do controle</button>
+      </div>
+    </section>
+
+    <div class="mensagem" id="erro" role="alert" hidden></div>
+
+    <section id="sec-atrasadas" hidden>
+      <h2 class="secao-titulo" id="titulo-atrasadas"></h2>
+      <div id="lista-atrasadas"></div>
+    </section>
+
+    <section>
+      <h2 class="secao-titulo">Hoje</h2>
+      <div id="lista-hoje"></div>
+    </section>
+  </main>
+
+  <a class="fab" href="tarefa.html" aria-label="Nova tarefa">+</a>
+
+  <script src="js/api.js"></script>
+  <script src="js/comum.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/meu-dia.js"></script>
+</body>
+</html>
