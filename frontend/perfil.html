@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perfil - Meu Dia</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header class="topo" id="topo"></header>
+
+  <main class="pagina">
+    <section class="cartao cartao-largo">
+      <h1>Perfil</h1>
+      <p class="subtitulo">Atualize seus dados.</p>
+
+      <form id="form-perfil">
+        <label for="nome">Nome</label>
+        <input id="nome" type="text" minlength="2" maxlength="100" required>
+        <label for="email">E-mail</label>
+        <input id="email" type="email" maxlength="150" required>
+        <button class="botao" type="submit">Salvar</button>
+      </form>
+
+      <div class="mensagem" id="erro" role="alert" hidden></div>
+      <div class="sucesso" id="ok" role="status" hidden></div>
+    </section>
+
+    <button class="botao botao-secundario" type="button" id="btn-sair">Sair da conta</button>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/perfil.js"></script>
+</body>
+</html>

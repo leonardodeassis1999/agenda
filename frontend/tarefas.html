@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minhas tarefas - Meu Dia</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header class="topo" id="topo"></header>
+
+  <main class="pagina">
+    <h1>Minhas tarefas</h1>
+
+    <section class="cartao cartao-largo">
+      <div class="filtros">
+        <div>
+          <label for="f-status">Status</label>
+          <select id="f-status">
+            <option value="">Todos</option>
+            <option value="pendente">Pendente</option>
+            <option value="em_andamento">Em andamento</option>
+            <option value="concluida">Concluída</option>
+          </select>
+        </div>
+        <div>
+          <label for="f-data">Data</label>
+          <input id="f-data" type="date">
+        </div>
+        <label class="marcar"><input id="f-atrasadas" type="checkbox"> Só atrasadas</label>
+        <button class="btn" type="button" id="f-limpar">Limpar filtros</button>
+      </div>
+    </section>
+
+    <p class="contagem" id="contagem"></p>
+    <div id="lista"></div>
+    <div class="mensagem" id="erro" role="alert" hidden></div>
+  </main>
+
+  <a class="fab" href="tarefa.html" aria-label="Nova tarefa">+</a>
+
+  <script src="js/api.js"></script>
+  <script src="js/comum.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/tarefas.js"></script>
+</body>
+</html>
