@@ -5,3 +5,5 @@ pymysql
 pydantic-settings
 pytest
 httpx
+bcrypt
+PyJWT
