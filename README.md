@@ -57,10 +57,6 @@ cd agenda
 1. Abra **File → Open SQL Script** e escolha o arquivo `banco.sql` deste repositório.
 2. Clique no raio ⚡ para executar. Ele cria o banco `agenda` e as tabelas `usuarios` e `tarefas`.
 
-```sql
-CREATE DATABASE agenda;
-```
-
 ### 3. Configure o .env
 
 1. Copie o modelo: `copy .env.example .env`
