@@ -6,7 +6,10 @@ Sistema web responsivo para gerenciamento de rotinas diárias. Nasceu de um prob
 
 - Cadastro e login de usuários com autenticação JWT
 - Perfil do usuário
-- CRUD de tarefas: criar, editar, iniciar, concluir e filtrar
+- CRUD de tarefas com título, descrição, categoria, prioridade, data prevista e tempo estimado
+- Controle do andamento: iniciar e concluir tarefas, com registro dos horários
+- Identificação de tarefas atrasadas
+- Filtros de tarefas
 - Telas de "Minhas tarefas" e "Meu dia"
 - Testes automatizados
 
