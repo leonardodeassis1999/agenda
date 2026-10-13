@@ -52,7 +52,10 @@ cd agenda
 
 ### 2. Banco de dados
 
-É necessário ter o MySQL instalado e um banco chamado **agenda** criado:
+É necessário ter o MySQL instalado. No MySQL Workbench:
+
+1. Abra **File → Open SQL Script** e escolha o arquivo `banco.sql` deste repositório.
+2. Clique no raio ⚡ para executar. Ele cria o banco `agenda` e as tabelas `usuarios` e `tarefas`.
 
 ```sql
 CREATE DATABASE agenda;
